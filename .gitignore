@@ -3,3 +3,5 @@ venv/
 __pycache__/
 .pytest_cache/
 *.pyc
+src/expenses.json
+data/expenses.json
