@@ -57,3 +57,11 @@ These were excluded because the assignment explicitly called for JSON file stora
 - Verified update and delete operations.
 - Verified invalid UUID and invalid date handling.
 - Confirmed logging output for INFO, WARNING, and ERROR scenarios.
+
+## 5. Architectural Decisions
+
+- FastAPI was selected for automatic request validation and OpenAPI documentation.
+- Business logic was separated into a dedicated service layer, keeping route handlers thin.
+- JSON file storage was used to satisfy the assignment's stated requirements.
+- Tests use a temporary JSON file (via a pytest fixture) to avoid modifying production data.
+- Pydantic models enforce strict validation on all inputs (amount, date, required fields), catching malformed requests before they reach the business logic.
